@@ -1,0 +1,10 @@
+.episode-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .copy-wrap {
+        border: 1px solid #cab47b;
+        padding: 20px 40px;
+    }
+}

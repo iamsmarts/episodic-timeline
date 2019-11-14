@@ -1,0 +1,21 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 62.5%;
+    color: #fff;
+}
+h1,
+h2,
+h3 {
+    font-family: 'Pirata One', cursive;
+    text-transform: capitalize;
+    font-size: 2.4rem;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+        color: #cab47a;
+    }
+}
+.App {
+}

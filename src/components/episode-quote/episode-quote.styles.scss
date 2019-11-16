@@ -1,0 +1,22 @@
+.episode-quote {
+    background-size: cover;
+    background-position: center;
+    background-color: #000000;
+    min-height: 90vh;
+    position: relative;
+    .qoute-bkg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 90vh;
+        width: 100%;
+        background-size: cover;
+        opacity: 0.1;
+    }
+    p {
+        z-index: 2;
+        .byline {
+            font-family: 'Pirata One', cursive;
+        }
+    }
+}

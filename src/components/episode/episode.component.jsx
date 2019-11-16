@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Slider from 'react-animated-slider'
 
 import EpisodeTitle from '../episode-title/episode-title.component'
+import EpisodeQuote from '../episode-quote/episode-quote.component'
+import EpisodeBlurb from '../episode-blurb/episode-blurb.component'
 
 import 'react-animated-slider/build/horizontal.css'
 import './episode.styles.scss'
@@ -27,30 +29,30 @@ class Episode extends Component {
         if (this.state.slides !== null) {
             episodeSlides = this.state.slides.map((slide, i) => {
                 if (slide.type === 'main') {
+                    console.log(slide)
                     return (
                         <EpisodeTitle
                             title={this.state.title}
                             sub={slide.title}
                             key={`${this.state.id}.${i}`}
+                            bkg={slide.image}
                         />
                     )
                 } else if (slide.type === 'blurb') {
                     return (
-                        <div
-                            className="episode-blurb"
+                        <EpisodeBlurb
                             key={`${this.state.id}.${i}`}
-                        >
-                            <p>{slide.blurb}</p>
-                        </div>
+                            blurb={slide.blurb}
+                        />
                     )
                 } else {
                     return (
-                        <div
-                            className="episode-quote"
+                        <EpisodeQuote
+                            quote={slide.quote}
+                            byline={slide.byline}
+                            bkg={slide.image}
                             key={`${this.state.id}.${i}`}
-                        >
-                            <p>{slide.quote}</p>
-                        </div>
+                        />
                     )
                 }
             })
